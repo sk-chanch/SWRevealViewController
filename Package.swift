@@ -12,6 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SWRevealViewController",
+            type: .dynamic,
             targets: ["SWRevealViewController"]),
     ],
     dependencies: [
@@ -24,7 +25,10 @@ let package = Package(
     
          .target(
             name: "SWRevealViewController",
-            publicHeadersPath: ".",
+            publicHeadersPath: "include",
+            cSettings: [
+                 .headerSearchPath("Sources/SWRevealViewController/include")
+            ],
             linkerSettings: [
                 .linkedFramework("UIKit", .when(platforms: [.iOS])),
                 .linkedFramework("QuartzCore", .when(platforms: [.iOS])),
