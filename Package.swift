@@ -25,7 +25,6 @@ let package = Package(
     
          .target(
             name: "SWRevealViewController",
-            path: "SWRevealViewController",
             publicHeadersPath: "include",
             linkerSettings: [
                 .linkedFramework("UIKit", .when(platforms: [.iOS])),
