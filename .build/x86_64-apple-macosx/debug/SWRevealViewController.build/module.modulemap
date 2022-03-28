@@ -1,0 +1,4 @@
+module SWRevealViewController {
+    header "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController-Swift.h"
+    requires objc
+}

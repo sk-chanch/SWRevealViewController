@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/master.swiftdeps"
+  },
+  "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Sources/SWRevealViewController/SWRevealViewController.swift": {
+    "dependencies": "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController.d",
+    "object": "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController.swift.o",
+    "swiftmodule": "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController.swiftdeps"
+  }
+}

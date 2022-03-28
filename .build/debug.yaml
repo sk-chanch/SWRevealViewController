@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SWRevealViewController-debug.module": ["<SWRevealViewController-debug.module>"]
+  "SWRevealViewControllerPackageTests-debug.test": ["<SWRevealViewControllerPackageTests-debug.test>"]
+  "SWRevealViewControllerTests-debug.module": ["<SWRevealViewControllerTests-debug.module>"]
+  "main": ["<SWRevealViewController-debug.module>"]
+  "test": ["<SWRevealViewController-debug.module>","<SWRevealViewControllerPackageTests-debug.test>","<SWRevealViewControllerTests-debug.module>"]
+default: "main"
+nodes:
+  "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Sources/SWRevealViewController/":
+    is-directory-structure: true
+  "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Tests/SWRevealViewControllerTests/":
+    is-directory-structure: true
+commands:
+  "<SWRevealViewController-debug.module>":
+    tool: phony
+    inputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController.swift.o","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.swiftmodule"]
+    outputs: ["<SWRevealViewController-debug.module>"]
+
+  "<SWRevealViewControllerPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerPackageTests.xctest/Contents/MacOS/SWRevealViewControllerPackageTests"]
+    outputs: ["<SWRevealViewControllerPackageTests-debug.test>"]
+
+  "<SWRevealViewControllerTests-debug.module>":
+    tool: phony
+    inputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.build/SWRevealViewControllerTests.swift.o","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.swiftmodule"]
+    outputs: ["<SWRevealViewControllerTests-debug.module>"]
+
+  "C.SWRevealViewController-debug.module":
+    tool: swift-compiler
+    inputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Sources/SWRevealViewController/SWRevealViewController.swift"]
+    outputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController.swift.o","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SWRevealViewController"
+    module-output-path: "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.swiftmodule"
+    import-paths: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build"
+    objects: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController-Swift.h","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Sources/SWRevealViewController/SWRevealViewController.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.SWRevealViewControllerPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.build/SWRevealViewController.swift.o","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.build/SWRevealViewControllerTests.swift.o"]
+    outputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerPackageTests.xctest/Contents/MacOS/SWRevealViewControllerPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/SWRevealViewControllerPackageTests.xctest/Contents/MacOS/SWRevealViewControllerPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug","-o","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerPackageTests.xctest/Contents/MacOS/SWRevealViewControllerPackageTests","-module-name","SWRevealViewControllerPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","x86_64-apple-macosx11.0","-Xlinker","-add_ast_path","-Xlinker","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.SWRevealViewControllerTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Tests/SWRevealViewControllerTests/SWRevealViewControllerTests.swift","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewController.swiftmodule"]
+    outputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.build/SWRevealViewControllerTests.swift.o","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SWRevealViewControllerTests"
+    module-output-path: "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.swiftmodule"
+    import-paths: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.build"
+    objects: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/SWRevealViewControllerTests.build/SWRevealViewControllerTests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx11.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Tests/SWRevealViewControllerTests/SWRevealViewControllerTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Sources/SWRevealViewController/","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Tests/SWRevealViewControllerTests/","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Package.swift","/Volumes/THUNDER-WORK/iOS/GitHub/SWRevealViewController/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
