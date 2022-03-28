@@ -1,1 +1,2 @@
-@_exported import SWRevealViewController
+
+#import "Sources/SWRevealViewController/include/SWRevealViewController.h"
