@@ -26,6 +26,7 @@ let package = Package(
          .target(
             name: "SWRevealViewController",
             path: "SWRevealViewController",
+            sources: ["SWRevealViewController.m"],
             publicHeadersPath: "include",
             cSettings: [
                  .headerSearchPath("SWRevealViewController/include")
