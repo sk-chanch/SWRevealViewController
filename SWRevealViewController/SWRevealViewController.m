@@ -23,6 +23,8 @@
  Early code inspired on a similar class by Philip Kluz (Philip.Kluz@zuui.org)
  
 */
+#if TARGET_OS_IOS
+#import <UIKit/UIKit.h>
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -1934,3 +1936,4 @@ NSString * const SWSegueRightIdentifier = @"sw_right";
 //@end
 
 
+#endif
