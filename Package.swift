@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SWRevealViewController",
-            targets: ["SWRevealViewController"]),
+            targets: ["SWRevealViewController", "SWRevealViewController-ObjC"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,7 +23,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
     
          .target(
-            name: "SWRevealViewController",
+            name: "SWRevealViewController-ObjC",
             dependencies: [],
             path: "Sources",
             sources: ["SWRevealViewController/SWRevealViewController.m"],
@@ -35,6 +35,12 @@ let package = Package(
                 .linkedFramework("UIKit", .when(platforms: [.iOS])),
                 .linkedFramework("QuartzCore", .when(platforms: [.iOS])),
             ]
+        ),
+        .target(
+            name: "SWRevealViewController",
+            dependencies: ["SWRevealViewController-ObjC"],
+            path: "SwiftSources", 
+            publicHeadersPath: "include"
         )
     ]
 )
