@@ -24,6 +24,7 @@ let package = Package(
     
          .target(
             name: "SWRevealViewController",
+            dependencies: [],
             path: "Sources",
             sources: ["SWRevealViewController/SWRevealViewController.m"],
             publicHeadersPath: "SWRevealViewController/include",
