@@ -1,4 +1,4 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,13 +6,14 @@ import PackageDescription
 let package = Package(
     name: "SWRevealViewController",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v10)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SWRevealViewController",
-            targets: ["SWRevealViewController"]),
+            targets: ["SWRevealViewController"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,24 +22,24 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-    
-         .target(
-            name: "SWRevealViewControllerObjC",
-            dependencies: [],
-            path: "SWRevealViewController",
-            exclude: ["SwiftSources"],
-            cSettings: [
-                .headerSearchPath("Internal"), // 5
-            ],
-            linkerSettings: [
-                .linkedFramework("UIKit", .when(platforms: [.iOS])),
-                .linkedFramework("QuartzCore", .when(platforms: [.iOS])),
-            ]
-        ),
         .target(
             name: "SWRevealViewController",
-            dependencies: ["SWRevealViewControllerObjC"],
-            path: "SwiftSources"
+            dependencies: [],
+            path: "Sources",
+            publicHeadersPath: "include",
+            cSettings: [
+                .headerSearchPath("**")
+            ],
+            linkerSettings: [
+                .linkedLibrary("UIKit"),
+                .linkedFramework("Foundation"),
+                .linkedFramework("CoreGraphics")
+            ]
         )
+    ],
+    swiftLanguageVersions: [
+        .v4,
+        .v4_2,
+        .v5,
     ]
 )

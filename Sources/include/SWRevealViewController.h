@@ -136,11 +136,10 @@
 
 */
 
-
+@import Foundation;
+@import CoreGraphics;
 #if TARGET_OS_IOS
-#import <UIKit/UIKit.h>
-
-
+@import UIKit;
 
 @class SWRevealViewController;
 @protocol SWRevealViewControllerDelegate;

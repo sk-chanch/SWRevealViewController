@@ -23,12 +23,13 @@
  Early code inspired on a similar class by Philip Kluz (Philip.Kluz@zuui.org)
  
 */
-#if TARGET_OS_IOS
-#import <UIKit/UIKit.h>
 
 #import <QuartzCore/QuartzCore.h>
 
-#import "SWRevealViewController.h"
+#import "include/SWRevealViewController.h"
+
+#if TARGET_OS_IOS
+@import UIKit;
 
 #pragma mark - StatusBar Helper Function
 
@@ -1933,6 +1934,4 @@ NSString * const SWSegueRightIdentifier = @"sw_right";
 //}
 //
 //@end
-
-
 #endif
