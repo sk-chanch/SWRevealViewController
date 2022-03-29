@@ -29,11 +29,6 @@ let package = Package(
             publicHeadersPath: "include",
             cSettings: [
                 .headerSearchPath("**")
-            ],
-            linkerSettings: [
-                .linkedLibrary("UIKit"),
-                .linkedFramework("Foundation"),
-                .linkedFramework("CoreGraphics")
             ]
         )
     ],
