@@ -28,12 +28,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-
-#if SWIFT_PACKAGE
 #import "SWRevealViewController.h"
-#else
-#import <SWRevealViewController/SWRevealViewController.h>
-#endif
 
 #pragma mark - StatusBar Helper Function
 
